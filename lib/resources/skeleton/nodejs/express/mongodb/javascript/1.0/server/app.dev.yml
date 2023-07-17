@@ -1,0 +1,7 @@
+apps:
+  - name: {{{ projectName }}}
+    restart_delay: 100
+    script: npm run dev
+    autorestart: true
+    env:
+      NODE_ENV: development
