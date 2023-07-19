@@ -1,0 +1,6 @@
+{
+    "language": "{{{ language }}}",
+    "framework": "{{{ framework }}}",
+    "database": "{{{ database }}}",
+    "boilerplate": "{{{ boilerplate }}}"
+}
