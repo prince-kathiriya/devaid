@@ -2,5 +2,10 @@
     "language": "{{{ language }}}",
     "framework": "{{{ framework }}}",
     "database": "{{{ database }}}",
-    "boilerplate": "{{{ boilerplate }}}"
+    "boilerplate": "{{{ boilerplate }}}",
+    "dbmodels": [
+        "Role", 
+        "User", 
+        "OTP"
+    ]
 }
