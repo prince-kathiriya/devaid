@@ -14,7 +14,7 @@
                     {
                         "key": "local-upload",
                         "value": "true",
-                        "description": "will upload files in local 'public/uploads' if set to true",
+                        "description": "will upload files in local if set to true",
                         "type": "text",
                         "disabled": true
                     }
@@ -130,7 +130,7 @@
                     {
                         "key": "local-upload",
                         "value": "true",
-                        "description": "will upload files in local 'public/uploads' if set to true",
+                        "description": "will upload files in local if set to true",
                         "type": "text",
                         "disabled": true
                     }
