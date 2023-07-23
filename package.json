@@ -55,7 +55,9 @@
     "expressjs",
     "express server",
     "express setup",
-    "prince"
+    "prince",
+    "kathiriya",
+    "prince kathiriya"
   ],
   "bin": {
     "devaid": "bin/devaid"
