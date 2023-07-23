@@ -1,0 +1,199 @@
+{
+    "name": "{{{ crudNameCase.kebabCase }}}",
+    "item": [
+        {
+            "name": "create-{{{ crudNameCase.kebabCase }}}",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "x-auth-token",
+                        "value": "{{x-auth-token}}",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": {{{ rawbody }}},
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{local}}/{{{ crudNameCase.kebabCase }}}",
+                    "host": [
+                        "{{local}}"
+                    ],
+                    "path": [
+                        "{{{ crudNameCase.kebabCase }}}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "fetch-{{{ crudNameCase.kebabCase }}}",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "x-auth-token",
+                        "value": "{{x-auth-token}}",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{local}}/{{{ crudNameCase.kebabCase }}}",
+                    "host": [
+                        "{{local}}"
+                    ],
+                    "path": [
+                        "{{{ crudNameCase.kebabCase }}}"
+                    ],
+                    "query": [
+                        {
+                            "key": "_id",
+                            "value": "111111111111111111111111",
+                            "disabled": true
+                        },
+                        {
+                            "key": "isAll",
+                            "value": "true",
+                            "description": "returns all records, ignores of isActive flag",
+                            "disabled": true
+                        },
+                        {
+                            "key": "isActive",
+                            "value": "true",
+                            "disabled": true
+                        },
+                        {
+                            "key": "search",
+                            "value": "devaid",
+                            "disabled": true
+                        },
+                        {
+                            "key": "page",
+                            "value": "1",
+                            "description": "default: 1",
+                            "disabled": true
+                        },
+                        {
+                            "key": "limit",
+                            "value": "1000",
+                            "description": "default: 100",
+                            "disabled": true
+                        },
+                        {
+                            "key": "sortBy",
+                            "value": "createdAt",
+                            "description": "default: createdAt",
+                            "disabled": true
+                        },
+                        {
+                            "key": "sortOrder",
+                            "value": "DESC",
+                            "description": "default: DESC",
+                            "disabled": true
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update-{{{ crudNameCase.kebabCase }}}",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "x-auth-token",
+                        "value": "{{x-auth-token}}",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": {{{ rawbody }}},
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{local}}/{{{ crudNameCase.kebabCase }}}/:_id",
+                    "host": [
+                        "{{local}}"
+                    ],
+                    "path": [
+                        "{{{ crudNameCase.kebabCase }}}",
+                        ":_id"
+                    ],
+                    "variable": [
+                        {
+                            "key": "_id",
+                            "value": "111111111111111111111111",
+                            "description": "updates body for record with _id "
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "toggle-active-status-{{{ crudNameCase.kebabCase }}}",
+            "request": {
+                "method": "PATCH",
+                "header": [
+                    {
+                        "key": "x-auth-token",
+                        "value": "{{x-auth-token}}",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{local}}/{{{ crudNameCase.kebabCase }}}/:_id",
+                    "host": [
+                        "{{local}}"
+                    ],
+                    "path": [
+                        "{{{ crudNameCase.kebabCase }}}",
+                        ":_id"
+                    ],
+                    "variable": [
+                        {
+                            "key": "_id",
+                            "value": "111111111111111111111111",
+                            "description": "toggle isActive flag for record with _id"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
