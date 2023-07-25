@@ -12,7 +12,7 @@
                         "type": "text"
                     },
                     {
-                        "key": "local-upload",
+                        "key": "s3-upload",
                         "value": "true",
                         "description": "will upload files in local if set to true",
                         "type": "text",
@@ -128,7 +128,7 @@
                         "type": "text"
                     },
                     {
-                        "key": "local-upload",
+                        "key": "s3-upload",
                         "value": "true",
                         "description": "will upload files in local if set to true",
                         "type": "text",
