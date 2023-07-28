@@ -14,7 +14,7 @@
                     {
                         "key": "s3-upload",
                         "value": "true",
-                        "description": "will upload files in local if set to true",
+                        "description": "will upload files in s3 if set to true",
                         "type": "text",
                         "disabled": true
                     }
@@ -130,7 +130,7 @@
                     {
                         "key": "s3-upload",
                         "value": "true",
-                        "description": "will upload files in local if set to true",
+                        "description": "will upload files in s3 if set to true",
                         "type": "text",
                         "disabled": true
                     }
