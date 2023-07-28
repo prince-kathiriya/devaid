@@ -80,7 +80,7 @@ function onError(error) {
       ** MAKE SURE TO NOT KILL ANY IMPORTANT PROCESS
       COMMANDS TO KILL PROCESS RUNNING ON PORT ${port}:
         LINUX/MAC: 'sudo kill -9 $(sudo lsof -t -i:${port})'
-        WINDOWS: 'taskkill /F /PID ${port}'
+        WINDOWS: 'for /f "tokens=5" %a in ('netstat -ano ^| findstr :${port}') do @taskkill /PID %a /F'
     `);
       process.exit(1);
     default:
