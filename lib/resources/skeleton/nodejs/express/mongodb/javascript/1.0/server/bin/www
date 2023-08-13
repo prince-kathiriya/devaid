@@ -35,7 +35,7 @@ connectdb.then((connection) => {
   
 }).catch((error) => {
   logger.error('✘ DATABASE CONNECTION FAILED');
-  throw error; //! this will stop the server if database connection failed
+  throw error; //* this will stop the server if database connection failed
 });
 
 
